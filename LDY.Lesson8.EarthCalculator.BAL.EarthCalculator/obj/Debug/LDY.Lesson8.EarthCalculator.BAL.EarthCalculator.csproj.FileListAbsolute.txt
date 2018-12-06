@@ -1,0 +1,9 @@
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\bin\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.dll
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\bin\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.pdb
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\bin\Debug\LDY.Lesson8.EarthCalculator.Shared.dll
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\bin\Debug\LDY.Lesson8.EarthCalculator.Shared.pdb
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\obj\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.csprojAssemblyReference.cache
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\obj\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.csproj.CoreCompileInputs.cache
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\obj\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.csproj.CopyComplete
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\obj\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.dll
+d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\obj\Debug\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.pdb

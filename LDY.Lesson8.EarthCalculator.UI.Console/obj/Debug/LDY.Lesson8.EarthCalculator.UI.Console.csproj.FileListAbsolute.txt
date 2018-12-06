@@ -1,0 +1,2 @@
+D:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.UI.Console\obj\Debug\LDY.Lesson8.EarthCalculator.UI.Console.csprojAssemblyReference.cache
+D:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.UI.Console\obj\Debug\LDY.Lesson8.EarthCalculator.UI.Console.csproj.CoreCompileInputs.cache
