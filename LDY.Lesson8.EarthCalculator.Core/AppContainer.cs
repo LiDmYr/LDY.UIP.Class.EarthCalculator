@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services;
 using LDY.Lesson8.EarthCalculator.Shared.Interfaces;
+using LDY.Lesson8.EarthCalculator.Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace LDY.Lesson8.EarthCalculator.Core {
 
             //builder.RegisterType<DBWriter>().As<IDBRepository>().SingleInstance();
             //builder.RegisterType<FileWriter>().As<IFileWriter>().SingleInstance();
-            //builder.RegisterType<ConsoleWriter>().As<IConsoleWriter>().SingleInstance();
+            builder.RegisterType<ConsoleWriter>().As<IConsoleWriter>().SingleInstance();
             builder.RegisterType<PointsValidator>().As<IPointsValidator>();
             builder.RegisterType<BAL.EarthCalculator.Services.EarthCalculator>().As<IEarthCalculator>();
             builder.RegisterType<Logger>().As<ILogger>().SingleInstance();

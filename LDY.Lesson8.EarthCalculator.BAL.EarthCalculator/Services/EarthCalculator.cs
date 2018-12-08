@@ -10,14 +10,16 @@ using LDY.Lesson8.EarthCalculator.Shared.Models;
 
 namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
     public class EarthCalculator : IEarthCalculator {
-
+        public ILogger Logger { get; set; }
         public IPointsValidator PointsValidator { get; set; }
 
         public EarthCalculator(IPointsValidator pointsValidator, ILogger logger) {    
              PointsValidator = pointsValidator;
+            this.Logger = logger;
         }
 
         public EarthCalculationResult GetEarthCalculationResult(IList<Point> points) {
+            this.Logger.Info("Start");
             var earthCalculationResult = new EarthCalculationResult();
             earthCalculationResult.PointsValidationResult = PointsValidator.GetPointsValidationResult(points);
             bool isPointsValid = earthCalculationResult.PointsValidationResult.IsPointsValid;
@@ -31,7 +33,7 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
                 earthCalculationResult.EarthSquare = -1;
                 earthCalculationResult.IsCalculationSuccess = isPointsValid;
             }
-
+            Logger.Warning(earthCalculationResult.EarthSquare.ToString());
             return earthCalculationResult;
         }
 
