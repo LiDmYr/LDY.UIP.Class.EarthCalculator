@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using LDY.Lesson8.EarthCalculator.Core.DI;
 using LDY.Lesson8.EarthCalculator.Shared.Interfaces;
 using LDY.Lesson8.EarthCalculator.Shared.Models;
 
@@ -12,13 +13,18 @@ namespace LDY.Lesson8.EarthCalculator.UI.Console {
 
         public IEarthCalculator EarthCalculator { get; set; }
 
-        public EarthCalculatorUI(IEarthCalculator earthCalculator) {
-            EarthCalculator = earthCalculator;
+        public ILogger Logger { get; set; }
+
+        public EarthCalculatorUI() {
+            EarthCalculator = AppContainer.Resolve<IEarthCalculator>();
+            Logger = AppContainer.Resolve<ILogger>();
         }
 
         internal void StartCalculation() {
             string mainString = string.Empty;
             while (mainString != "quit") {
+                Logger.Fatal("StartCalculation");
+
                 System.Console.WriteLine("Please input points");
                 List<Point> points = GetPoints();
                 ShowEarthSquare(points);

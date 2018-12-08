@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services;
+using LDY.Lesson8.EarthCalculator.Core.DI;
 
 namespace LDY.Lesson8.EarthCalculator.UI.WPF {
     /// <summary>
@@ -22,8 +23,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
         public MainWindow() {
             InitializeComponent();
 
-            var pointsValidator = new PointsValidator();
-            EarthCalculatorUIView.EarthCalculator = new BAL.EarthCalculator.Services.EarthCalculator(pointsValidator);
+            AppContainer.ConfigureContainer();
         }
     }
 }
