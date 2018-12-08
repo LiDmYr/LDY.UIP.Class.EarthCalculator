@@ -15,9 +15,9 @@ namespace LDY.Lesson8.EarthCalculator.Core.DI {
         public static void ConfigureContainer() {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<DBRepository>().As<IDBRepository>().SingleInstance();
-            builder.RegisterType<FileRepository>().As<IFileWriter>().SingleInstance();
-            builder.RegisterType<ConsoleRepository>().As<IConsoleWriter>().SingleInstance();
+            builder.RegisterType<DBWriter>().As<IDBRepository>().SingleInstance();
+            builder.RegisterType<FileWriter>().As<IFileWriter>().SingleInstance();
+            builder.RegisterType<ConsoleWriter>().As<IConsoleWriter>().SingleInstance();
             builder.RegisterType<PointsValidator>().As<IPointsValidator>();
             builder.RegisterType<BAL.EarthCalculator.Services.EarthCalculator>().As<IEarthCalculator>();
             builder.RegisterType<Logger>().As<ILogger>().SingleInstance();
