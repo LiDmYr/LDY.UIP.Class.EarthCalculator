@@ -7,8 +7,7 @@ using Newtonsoft.Json;
 
 namespace LDY.Lesson8.EarthCalculator.Shared.Interfaces
 {
-    public class JSONSerializer
-    {
+    public class JSONSerializer : IJONSerializer {
         public T Deserialize<T>(string text)
         {
             return JsonConvert.DeserializeObject<T>(text);

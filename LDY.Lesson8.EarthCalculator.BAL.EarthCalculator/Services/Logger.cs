@@ -10,7 +10,7 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
             this.ConsoleWriter = consoleWriter;
             this.FileWriter = fileWriter;
         }
-        public LogLevel CurrentLogLevel { get; set; } = LogLevel.Error;
+        public LogLevel CurrentLogLevel { get; set; } = LogLevel.Info;
         private IConsoleWriter ConsoleWriter { get; set; }
         private IFileWriter FileWriter { get; set; }
 
