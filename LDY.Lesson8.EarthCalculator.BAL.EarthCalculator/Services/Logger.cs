@@ -3,13 +3,16 @@ using LDY.Lesson8.EarthCalculator.Shared.Models;
 using System;
 
 namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
-    public class Logger : ILogger {
-        public Logger(IConsoleWriter consoleWriter)
+    public class Logger : ILogger
+    {
+        public Logger(IConsoleWriter consoleWriter, IFileWriter fileWriter)
         {
             this.ConsoleWriter = consoleWriter;
+            this.FileWriter = fileWriter;
         }
         public LogLevel CurrentLogLevel { get; set; } = LogLevel.Error;
         private IConsoleWriter ConsoleWriter { get; set; }
+        private IFileWriter FileWriter { get; set; }
 
         public void Info(string message)
         {
@@ -17,6 +20,7 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
             if (LogLevel.Info >= this.CurrentLogLevel)
             {
                 this.ConsoleWriter.Write(logRecord);
+                this.FileWriter.Write(logRecord);
             }
         }
 
@@ -26,6 +30,7 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
             if (LogLevel.Warning >= this.CurrentLogLevel)
             {
                 this.ConsoleWriter.Write(logRecord);
+                this.FileWriter.Write(logRecord);
             }
         }
 
@@ -53,5 +58,6 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
             
         }
 
+ 
     }
 }

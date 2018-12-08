@@ -16,11 +16,13 @@ namespace LDY.Lesson8.EarthCalculator.Core {
             var builder = new ContainerBuilder();
 
             //builder.RegisterType<DBWriter>().As<IDBRepository>().SingleInstance();
-            //builder.RegisterType<FileWriter>().As<IFileWriter>().SingleInstance();
+            builder.RegisterType<FileWriter>().As<IFileWriter>().SingleInstance();
             builder.RegisterType<ConsoleWriter>().As<IConsoleWriter>().SingleInstance();
             builder.RegisterType<PointsValidator>().As<IPointsValidator>();
             builder.RegisterType<BAL.EarthCalculator.Services.EarthCalculator>().As<IEarthCalculator>();
             builder.RegisterType<Logger>().As<ILogger>().SingleInstance();
+            builder.RegisterType<JSONSerializer>().As<IJONSerializer>();
+
 
             _container = builder.Build();
         }
