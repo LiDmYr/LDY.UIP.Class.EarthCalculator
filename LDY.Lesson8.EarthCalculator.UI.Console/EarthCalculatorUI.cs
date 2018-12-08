@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using LDY.Lesson8.EarthCalculator.Core;
 using LDY.Lesson8.EarthCalculator.Shared.Interfaces;
 using LDY.Lesson8.EarthCalculator.Shared.Models;
 
@@ -12,8 +13,8 @@ namespace LDY.Lesson8.EarthCalculator.UI.Console {
 
         public IEarthCalculator EarthCalculator { get; set; }
 
-        public EarthCalculatorUI(IEarthCalculator earthCalculator) {
-            EarthCalculator = earthCalculator;
+        public EarthCalculatorUI() {
+            EarthCalculator = AppContainer.Resolve<IEarthCalculator>();
         }
 
         internal void StartCalculation() {

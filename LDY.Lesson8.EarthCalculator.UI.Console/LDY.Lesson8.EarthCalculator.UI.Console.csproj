@@ -56,6 +56,10 @@
       <Project>{de0a7ceb-3dd9-488f-addd-40e62eb14693}</Project>
       <Name>LDY.Lesson8.EarthCalculator.BAL.EarthCalculator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LDY.Lesson8.EarthCalculator.Core\LDY.Lesson8.EarthCalculator.Core.csproj">
+      <Project>{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}</Project>
+      <Name>LDY.Lesson8.EarthCalculator.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LDY.Lesson8.EarthCalculator.Shared\LDY.Lesson8.EarthCalculator.Shared.csproj">
       <Project>{00F4A577-7478-462C-B321-904D1722E8B2}</Project>
       <Name>LDY.Lesson8.EarthCalculator.Shared</Name>

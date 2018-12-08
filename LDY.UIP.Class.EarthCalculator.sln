@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{76C060E6-039E-4440-A323-FAA503307715}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDY.Lesson8.EarthCalculator.UI.WPF", "LDY.Lesson8.EarthCalculator.UI.WPF\LDY.Lesson8.EarthCalculator.UI.WPF.csproj", "{1CB88533-FE2A-421E-9930-0DCC1961E5E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDY.Lesson8.EarthCalculator.Shared", "LDY.Lesson8.EarthCalculator.Shared\LDY.Lesson8.EarthCalculator.Shared.csproj", "{00F4A577-7478-462C-B321-904D1722E8B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D333438F-0F2A-42FF-9373-48023842E81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDY.Lesson8.EarthCalculator.Core", "LDY.Lesson8.EarthCalculator.Core\LDY.Lesson8.EarthCalculator.Core.csproj", "{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{00F4A577-7478-462C-B321-904D1722E8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F4A577-7478-462C-B321-904D1722E8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F4A577-7478-462C-B321-904D1722E8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{21D8E7D3-A966-4677-8351-DF398E443CB7} = {76C060E6-039E-4440-A323-FAA503307715}
 		{1CB88533-FE2A-421E-9930-0DCC1961E5E8} = {76C060E6-039E-4440-A323-FAA503307715}
 		{00F4A577-7478-462C-B321-904D1722E8B2} = {4E9964A4-9ED9-4AFF-946A-2245BF31CBB6}
+		{CA6DBC4A-2F03-4AFA-927D-1A4ABDA3E5A2} = {D333438F-0F2A-42FF-9373-48023842E81B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D977C371-C034-427A-A374-82539533FCB6}

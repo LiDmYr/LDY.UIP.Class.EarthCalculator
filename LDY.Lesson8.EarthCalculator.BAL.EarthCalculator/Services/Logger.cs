@@ -7,5 +7,6 @@ using LDY.Lesson8.EarthCalculator.Shared.Interfaces;
 
 namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
     public class Logger : ILogger {
+
     }
 }

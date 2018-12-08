@@ -13,11 +13,8 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
 
         public IPointsValidator PointsValidator { get; set; }
 
-        public EarthCalculator(IPointsValidator pointsValidator) {    
-            if (pointsValidator == null) { //IT's NOT REAL CASE BECAUSE IT HAS BE DONE BY DI CONTAINER
-                throw new Exception("IPointsValidator in DI is null");
-            }
-            PointsValidator = pointsValidator;
+        public EarthCalculator(IPointsValidator pointsValidator, ILogger logger) {    
+             PointsValidator = pointsValidator;
         }
 
         public EarthCalculationResult GetEarthCalculationResult(IList<Point> points) {
