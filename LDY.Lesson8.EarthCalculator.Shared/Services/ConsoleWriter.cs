@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace LDY.Lesson8.EarthCalculator.Shared.Services {
     public class ConsoleWriter : IConsoleWriter {
         public void Write(LogRecord logRecord) {
-            Console.WriteLine("ConsoleRepository =>" + logRecord);
+            Console.WriteLine("<ConsoleRepository> =>" + logRecord);
         }
     }
 }

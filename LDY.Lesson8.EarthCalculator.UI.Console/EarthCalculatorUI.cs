@@ -23,7 +23,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.Console {
         internal void StartCalculation() {
             string mainString = string.Empty;
             while (mainString != "quit") {
-                Logger.Fatal("StartCalculation");
+                Logger.Info($"[{this.GetType().Name}]: StartCalculation");
 
                 System.Console.WriteLine("Please input points");
                 List<Point> points = GetPoints();

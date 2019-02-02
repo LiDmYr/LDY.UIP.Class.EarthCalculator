@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace LDY.Lesson8.EarthCalculator.Shared.Services {
     public class DBWriter : IDBRepository {
         public void Write(LogRecord logRecord) {
-            Debug.WriteLine("DBRepository =>" + logRecord);
+            Console.WriteLine("<DBRepository> =>" + logRecord);
         }
     }
 }

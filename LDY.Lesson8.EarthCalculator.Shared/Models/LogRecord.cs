@@ -18,7 +18,7 @@ namespace LDY.Lesson8.EarthCalculator.Shared.Models {
         public LogLevel LogLevel { get; set; }
 
         public override string ToString() {
-            return $"___Message = {Message}; CreatedAt = {CreatedAt}; LogLevel = {LogLevel};";
+            return $"\n\tMessage='{Message}';\n\tCreatedAt={CreatedAt};\n\tLogLevel={LogLevel};";
         }
     }
 

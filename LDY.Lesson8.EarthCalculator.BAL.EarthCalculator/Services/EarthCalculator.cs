@@ -55,7 +55,7 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
             }
             double result = (double)Math.Abs(landArea / 2);
 
-            Logger.Info((isAlternativeCalculation? "Alternative" : "" ) + "Result Calculation = " + result);
+            Logger.Info($"[{this.GetType().Name}]:" + (isAlternativeCalculation? "Alternative" : "" ) + "Result Calculation = " + result);
 
             return result;
         }

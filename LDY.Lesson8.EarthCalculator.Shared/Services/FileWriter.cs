@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace LDY.Lesson8.EarthCalculator.Shared.Services {
     public class FileWriter : IFileWriter {
         public void Write(LogRecord logRecord) {
-            Console.WriteLine("FileRepository =>" + logRecord);
+            Console.WriteLine("<FileRepository> =>" + logRecord);
         }
     }
 }

@@ -70,7 +70,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
         }
 
         private void ShowSquare_Click(object sender, RoutedEventArgs e) {
-            Logger.Fatal("ShowSquare_Click");
+            Logger.Fatal($"[{this.GetType().Name}]: ShowSquare_Click");
 
             ShowEarthSquare(GetPoints());
         }
