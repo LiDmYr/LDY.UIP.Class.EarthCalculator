@@ -7,9 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <WrapPanel>
-        <TextBlock>X:</TextBlock>
-        <TextBox x:Name="PointX" Width="50"></TextBox>
-        <TextBlock>Y:</TextBlock>
-        <TextBox x:Name="PointY" Width="50"></TextBox>
+        <TextBlock>X</TextBlock>
+        <TextBox x:Name="InputX" Width="50" TextChanged="TextChanged"></TextBox>
+        <TextBlock>Y</TextBlock>
+        <TextBox x:Name="InputY" Width="50" TextChanged="TextChanged"></TextBox>
+        <Button x:Name="DeletePointViewButton" Click="DeletePointViewButton_Click">Delete</Button>
+        <TextBlock Foreground="Red" x:Name="ValidationBlock" Visibility="Collapsed"></TextBlock>
     </WrapPanel>
 </UserControl>

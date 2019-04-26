@@ -18,12 +18,14 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF.Controls {
     /// Interaction logic for PointInputView.xaml
     /// </summary>
     public partial class PointInputView : UserControl {
+        private bool IsInitializedComponent;
+
         private double _X;
         public double X {
             get { return _X; }
             set {
                 _X = value;
-                PointX.Text = _X.ToString();
+                InputY.Text = _X.ToString();
             }
         }
 
@@ -32,19 +34,50 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF.Controls {
             get { return _Y; }
             set {
                 _Y = value;
-                PointY.Text = _Y.ToString();
+                InputX.Text = _Y.ToString();
             }
         }
 
+        private double ParsedX;
+        private double ParsedY;
+
+        public delegate void PointViewStateHandler(PointInputView viewToDelete);
+        public event PointViewStateHandler DeletedPointView;
+
         public PointInputView() {
             InitializeComponent();
+            IsInitializedComponent = true;
+        }
+
+        public PointInputView(int x, int y) : this() {
+            X = x;
+            Y = y;
         }
 
         public Point GetPoint() {
-            bool isXValid = Double.TryParse(PointX.Text, out double x);
-            bool isYValid = Double.TryParse(PointY.Text, out double y);
-            var result = isXValid && isYValid ? new Point(x, y) : new Point();
-            return result;
+            return ParsedX == -1 || ParsedY == -1? new Point() : new Point(ParsedX, ParsedY);
+        }
+
+        private void TextChanged(object sender, TextChangedEventArgs e) {
+            if (!IsInitializedComponent) {
+                return;
+            }
+            bool valXres = Double.TryParse(InputX.Text, out ParsedX);
+            bool valYres = Double.TryParse(InputY.Text, out ParsedY);
+            if (!valXres || !valYres) {
+                ValidationBlock.Visibility = Visibility.Visible;
+                ValidationBlock.Text = "X OR Y value is not valid";
+                ParsedX = -1;
+                ParsedY = -1;
+            } else {
+                ValidationBlock.Visibility = Visibility.Collapsed;
+                ValidationBlock.Text = "";
+            }
+        }
+
+        private void DeletePointViewButton_Click(object sender, RoutedEventArgs e) {
+            if (DeletedPointView == null) { return; }
+            DeletedPointView(this);
         }
     }
 }
