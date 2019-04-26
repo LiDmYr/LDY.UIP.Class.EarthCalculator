@@ -1,6 +1,0 @@
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\bin\Debug\LDY.Lesson8.EarthCalculator.Shared.dll
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\bin\Debug\LDY.Lesson8.EarthCalculator.Shared.pdb
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\obj\Debug\LDY.Lesson8.EarthCalculator.Shared.csprojAssemblyReference.cache
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\obj\Debug\LDY.Lesson8.EarthCalculator.Shared.csproj.CoreCompileInputs.cache
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\obj\Debug\LDY.Lesson8.EarthCalculator.Shared.dll
-d:\UnivIP\IPU_C#Fundamentals_Sept18\LDY.UIP.Class.EarthCalculator\LDY.Lesson8.EarthCalculator.Shared\obj\Debug\LDY.Lesson8.EarthCalculator.Shared.pdb

@@ -8,12 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LDY.Lesson8.EarthCalculator.UI.WPF</RootNamespace>
     <AssemblyName>LDY.Lesson8.EarthCalculator.UI.WPF</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -112,6 +113,10 @@
     <ProjectReference Include="..\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator\LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.csproj">
       <Project>{DE0A7CEB-3DD9-488F-ADDD-40E62EB14693}</Project>
       <Name>LDY.Lesson8.EarthCalculator.BAL.EarthCalculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LDY.Lesson8.EarthCalculator.Core\LDY.Lesson8.EarthCalculator.Core.csproj">
+      <Project>{895D1587-9F19-4B56-B907-C0F9F6116542}</Project>
+      <Name>LDY.Lesson8.EarthCalculator.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\LDY.Lesson8.EarthCalculator.Shared\LDY.Lesson8.EarthCalculator.Shared.csproj">
       <Project>{00F4A577-7478-462C-B321-904D1722E8B2}</Project>

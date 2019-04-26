@@ -11,13 +11,13 @@ using LDY.Lesson8.EarthCalculator.Shared.Models;
 namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
     public class EarthCalculator : IEarthCalculator {
 
-        public IPointsValidator PointsValidator { get; set; }
+        private IPointsValidator PointsValidator;
 
-        public EarthCalculator(IPointsValidator pointsValidator) {    
-            if (pointsValidator == null) { //IT's NOT REAL CASE BECAUSE IT HAS BE DONE BY DI CONTAINER
-                throw new Exception("IPointsValidator in DI is null");
-            }
+        private ILogger Logger;
+
+        public EarthCalculator(IPointsValidator pointsValidator, ILogger logger) {    
             PointsValidator = pointsValidator;
+            Logger = logger;
         }
 
         public EarthCalculationResult GetEarthCalculationResult(IList<Point> points) {
@@ -54,6 +54,9 @@ namespace LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services {
                 landArea += par1 * (par2_1 - par2_2);
             }
             double result = (double)Math.Abs(landArea / 2);
+
+            Logger.Info($"[{this.GetType().Name}]:" + (isAlternativeCalculation? "Alternative" : "" ) + "Result Calculation = " + result);
+
             return result;
         }
     }

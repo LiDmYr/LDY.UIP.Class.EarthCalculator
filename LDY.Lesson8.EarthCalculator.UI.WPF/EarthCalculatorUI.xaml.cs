@@ -13,8 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LDY.Lesson8.EarthCalculator.BAL.EarthCalculator.Services;
+using LDY.Lesson8.EarthCalculator.Core.DI;
 using LDY.Lesson8.EarthCalculator.Shared.Interfaces;
 using LDY.Lesson8.EarthCalculator.Shared.Models;
+using LDY.Lesson8.EarthCalculator.UI.WPF.Controls;
 
 namespace LDY.Lesson8.EarthCalculator.UI.WPF {
     /// <summary>
@@ -22,19 +24,39 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
     /// </summary>
     public partial class EarthCalculatorUI : UserControl, IEarthCalculatorUI {
 
-        public IEarthCalculator EarthCalculator { get; set; }
+        public IEarthCalculator EarthCalculator {
+            get {
+                if (_EarthCalculator == null) {
+                    _EarthCalculator = AppContainer.Resolve<IEarthCalculator>();
+                }
+                return _EarthCalculator;
+            }
+        }
+        private IEarthCalculator _EarthCalculator;
+
+        public ILogger Logger {
+            get {
+                if (_Logger == null) {
+                    _Logger = AppContainer.Resolve<ILogger>();
+                }
+                return _Logger;
+            }
+        }
+        private ILogger _Logger;
 
         public EarthCalculatorUI() {
             InitializeComponent();
         }
 
         public List<Point> GetPoints() {
-            return new List<Point> {
-                PointView1.GetPoint(),
-                PointView2.GetPoint(),
-                PointView3.GetPoint(),
-                PointView4.GetPoint()
-            };
+            var points = new List<Point>();
+            foreach (var pointView in MainContainer.Children) {
+                var piv = pointView as PointInputView;
+                if (piv != null) {
+                    points.Add(piv.GetPoint());
+                }
+            }
+            return points;
         }
 
         public void ShowEarthSquare(List<Point> points) {
@@ -51,7 +73,19 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
         }
 
         private void ShowSquare_Click(object sender, RoutedEventArgs e) {
+            Logger.Fatal($"[{this.GetType().Name}]: ShowSquare_Click");
+
             ShowEarthSquare(GetPoints());
+        }
+
+        private void AddPointInput_Click(object sender, RoutedEventArgs e) {
+            PointInputView newPoint = new PointInputView(0, 0);
+            newPoint.DeletedPointView += OnDeletedPointView;
+            PointViewsContainer.Children.Add(newPoint);
+        }
+
+        private void OnDeletedPointView(PointInputView viewToDelete) {
+            PointViewsContainer.Children.Remove(viewToDelete);
         }
     }
 }
