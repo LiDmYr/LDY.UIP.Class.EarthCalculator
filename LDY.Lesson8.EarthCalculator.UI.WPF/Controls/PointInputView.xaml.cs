@@ -54,8 +54,14 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF.Controls {
             Y = y;
         }
 
+        public bool IsPointValid {
+            get {
+                return ParsedX == -1 || ParsedY == -1;
+            }
+        } 
+
         public Point GetPoint() {
-            return ParsedX == -1 || ParsedY == -1? new Point() : new Point(ParsedX, ParsedY);
+            return IsPointValid? new Point() : new Point(ParsedX, ParsedY);
         }
 
         private void TextChanged(object sender, TextChangedEventArgs e) {
@@ -64,7 +70,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF.Controls {
             }
             bool valXres = Double.TryParse(InputX.Text, out ParsedX);
             bool valYres = Double.TryParse(InputY.Text, out ParsedY);
-            if (!valXres || !valYres) {
+            if (!valXres || !valYres || ParsedX < 0 || ParsedY < 0) {
                 ValidationBlock.Visibility = Visibility.Visible;
                 ValidationBlock.Text = "X OR Y value is not valid";
                 ParsedX = -1;

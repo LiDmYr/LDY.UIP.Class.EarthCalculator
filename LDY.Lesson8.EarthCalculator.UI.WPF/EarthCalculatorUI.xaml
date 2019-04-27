@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:LDY.Lesson8.EarthCalculator.UI.WPF"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="400">
-    <StackPanel x:Name="MainContainer">
+    <StackPanel x:Name="MainContainer" HorizontalAlignment="Left">
         <StackPanel x:Name="PointViewsContainer" HorizontalAlignment="Center">
             <Controls:PointInputView X="0" Y="0" DeletedPointView="OnDeletedPointView"/>
             <Controls:PointInputView X="0" Y="500" DeletedPointView="OnDeletedPointView"/>
