@@ -50,7 +50,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
 
         public List<Point> GetPoints() {
             var points = new List<Point>();
-            foreach (var pointView in MainContainer.Children) {
+            foreach (var pointView in PointViewsContainer.Children) {
                 var piv = pointView as PointInputView;
                 if (piv != null) {
                     points.Add(piv.GetPoint());
@@ -85,6 +85,7 @@ namespace LDY.Lesson8.EarthCalculator.UI.WPF {
         }
 
         private void OnDeletedPointView(PointInputView viewToDelete) {
+            viewToDelete.DeletedPointView -= OnDeletedPointView;
             PointViewsContainer.Children.Remove(viewToDelete);
         }
     }
